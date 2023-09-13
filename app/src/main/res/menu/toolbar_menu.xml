@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/itSearch"
+        android:icon="@drawable/baseline_search_24"
+        android:title="Search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always|collapseActionView" />
+    <item
+        android:id="@+id/itChangePassword"
+        android:icon="@drawable/outline_replay_circle_filled_24"
+        app:showAsAction="never"
+        android:title="Change Password"
+        />
+    <item
+        android:id="@+id/itSignOut"
+        app:showAsAction="never"
+        android:title="Sign Out"
+        />
+
+</menu>

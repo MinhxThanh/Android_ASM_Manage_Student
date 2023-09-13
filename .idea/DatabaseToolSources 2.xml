@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DatabaseToolSources">
+    <data-source name="eduSys" uuid="1552a00e-53f1-4904-83c4-2484e60f12d2" type="SQLITE">
+      <base-info connect-type="DB_DEFAULT" product="SQLite" version="3.43.0" jdbc-name="SQLite JDBC" jdbc-version="3.43.0.0" />
+      <user-name />
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="main" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+      <url>jdbc:sqlite:identifier.sqlite</url>
+      <remarks />
+      <vm-options />
+      <driver-info id="sqlite.xerial" />
+      <ssh-properties enabled="false" />
+      <jdbc-additional-properties>
+        <property name="enable_load_extension" value="true" />
+      </jdbc-additional-properties>
+      <ssl-config enabled="false">
+        <uuid />
+        <caFile />
+        <clientCertificateFile />
+        <clientKeyFile />
+        <sslMode>REQUIRE</sslMode>
+      </ssl-config>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lavender"
+            android:elevation="5dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:logo="@drawable/baseline_home_24"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="Manage Students"
+            app:titleMarginStart="25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        android:paddingHorizontal="30dp"
+        android:paddingTop="180dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="MANAGEMENT"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnCreateClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="CREATE NEW CLASS"
+            android:textSize="20sp"
+            app:icon="@drawable/baseline_add_24"
+
+            app:iconGravity="textStart"
+            app:iconSize="30dp" />
+
+        <Button
+            android:id="@+id/btnListClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="LIST CLASS"
+            android:textSize="20sp"
+            app:icon="@drawable/baseline_format_list_bulleted_24"
+            app:iconGravity="textStart"
+
+            app:iconSize="30dp" />
+
+        <Button
+            android:id="@+id/btnManageStudents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="MANAGE STUDENTS"
+            android:textSize="20sp"
+            app:icon="@drawable/baseline_people_outline_24"
+            app:iconGravity="textStart"
+            app:iconSize="30dp" />
+    </LinearLayout>
+
+</LinearLayout>
