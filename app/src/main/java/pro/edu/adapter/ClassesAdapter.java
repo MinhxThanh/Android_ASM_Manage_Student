@@ -21,9 +21,6 @@ public class ClassesAdapter extends BaseAdapter {
         this.list = list;
     }
 
-    public ClassesAdapter() {
-    }
-
     @Override
     public int getCount() {
         return list.size();
@@ -41,16 +38,28 @@ public class ClassesAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
+        ClassesViewHolder holder = null;
         if (view == null) {
             view = LayoutInflater.from(context).inflate(R.layout.layout_classes_item_list_view, null);
+
+            holder = new ClassesViewHolder();
+
+            holder.tvClassCode = view.findViewById(R.id.tvClassCode);
+            holder.tvClassName = view.findViewById(R.id.tvClassName);
+
+            view.setTag(holder);
+        } else {
+            holder = (ClassesViewHolder) view.getTag();
         }
-        TextView tvCode = (TextView) view.findViewById(R.id.tvClassCode);
-        TextView tvName = (TextView) view.findViewById(R.id.tvClassName);
 
         Classes classes = list.get(i);
-        tvCode.setText("Code: " + classes.getCode());
-        tvName.setText("Name: " + classes.getName());
+        holder.tvClassCode.setText("Code: " + classes.getCode());
+        holder.tvClassName.setText("Name: " + classes.getName());
 
         return view;
+    }
+
+    public static class ClassesViewHolder {
+        public TextView tvClassCode, tvClassName;
     }
 }

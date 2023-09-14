@@ -39,19 +39,28 @@ public class StudentsAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
+        StudentViewHolder holder = null;
         if (view == null) {
             view = LayoutInflater.from(context).inflate(R.layout.layout_students_item_list_view, null);
+
+            holder = new StudentViewHolder();
+            holder.tvStudentLVName = view.findViewById(R.id.tvStudentLVName);
+            holder.tvStudentLVId = view.findViewById(R.id.tvStudentLVId);
+            holder.tvStudentLVBirthDate = view.findViewById(R.id.tvStudentLVBirthDate);
+
+            view.setTag(holder);
+        } else {
+            holder = (StudentViewHolder) view.getTag();
         }
-        TextView tvStudentLVId = (TextView) view.findViewById(R.id.tvStudentLVId);
-        TextView tvStudentLVName = (TextView) view.findViewById(R.id.tvStudentLVName);
-        TextView tvStudentLVBirthDate = (TextView) view.findViewById(R.id.tvStudentLVBirthDate);
 
-        Students student = list.get(i);
-
-        tvStudentLVId.setText(student.getId());
-        tvStudentLVName.setText(student.getName());
-        tvStudentLVBirthDate.setText(DateTimeHelper.toString(student.getBirthDate()));
+        holder.tvStudentLVId.setText(list.get(i).getId());
+        holder.tvStudentLVName.setText(list.get(i).getName());
+        holder.tvStudentLVBirthDate.setText(DateTimeHelper.toString(list.get(i).getBirthDate()));
 
         return view;
+    }
+
+    public static class StudentViewHolder {
+        public TextView tvStudentLVId, tvStudentLVName, tvStudentLVBirthDate;
     }
 }
